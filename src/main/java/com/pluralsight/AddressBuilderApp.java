@@ -32,6 +32,7 @@ public class AddressBuilderApp {
         String userShipState = myScanner.nextLine().trim();
         System.out.print("Shipping Zip: ");
         String userShipZip = myScanner.nextLine().trim();
+        System.out.println("\n");
 
         //using string builder to append and format
         //formatted my code ALOT cleaner
