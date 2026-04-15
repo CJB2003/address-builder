@@ -34,17 +34,21 @@ public class AddressBuilderApp {
         String userShipZip = myScanner.nextLine().trim();
 
         //using string builder to append and format
+        //formatted my code ALOT cleaner
         StringBuilder myUserAddress = new StringBuilder();
 
-        myUserAddress.append(userName + "\n"
-                + "\nBilling Address:" + "\n" + userBillSt + "\n"
-                + userBillCity + ", "
-                + userBillState + " "
-                + userBillZip + "\n"
-                + "\nShipping Address: " + "\n" + userShipSt + "\n"
-                + userShipCity + ", "
-                + userShipState + " "
-                + userShipZip);
+        myUserAddress.append(userName).append("\n\n");
+
+        myUserAddress.append(userBillSt).append("\n")
+                .append(userBillCity).append(", ")
+                .append(userBillState).append(" ")
+                .append(userBillZip).append("\n\n");
+
+        myUserAddress.append("Shipping Address: \n")
+                .append(userShipSt).append("\n")
+                .append(userShipCity).append(", ")
+                .append(userShipState).append(" ")
+                .append(userShipZip);
 
         //return string builder
         return myUserAddress.toString();
