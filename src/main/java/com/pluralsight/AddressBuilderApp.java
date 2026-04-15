@@ -30,9 +30,8 @@ public class AddressBuilderApp {
         String userShipCity = myScanner.nextLine().trim();
         System.out.print("Shipping State: ");
         String userShipState = myScanner.nextLine().trim();
-        System.out.print("Shipping Zip: ");
+        System.out.print("Shipping Zip: \n");
         String userShipZip = myScanner.nextLine().trim();
-        System.out.println("\n");
 
         //using string builder to append and format
         //formatted my code ALOT cleaner
@@ -40,7 +39,8 @@ public class AddressBuilderApp {
 
         myUserAddress.append(userName).append("\n\n");
 
-        myUserAddress.append(userBillSt).append("\n")
+        myUserAddress.append("Billing Address: \n")
+                .append(userBillSt).append("\n")
                 .append(userBillCity).append(", ")
                 .append(userBillState).append(" ")
                 .append(userBillZip).append("\n\n");
