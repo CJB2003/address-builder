@@ -5,32 +5,33 @@ public class AddressBuilderApp {
     public static Scanner myScanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        StringBuilder();
+        String userAddress = addressBuild();
+        System.out.println(userAddress);
 
     }
     //created this method to declutter main
-    public static void StringBuilder() {
+    public static String addressBuild() {
 
         //Asks for user input and prints them out
         System.out.println("Please provide the following information:");
         System.out.print("Full name: ");
-        String userName = myScanner.nextLine();
+        String userName = myScanner.nextLine().trim();
         System.out.print("Billing Street: ");
-        String userBillSt = myScanner.nextLine();
+        String userBillSt = myScanner.nextLine().trim();
         System.out.print("Billing City: ");
-        String userBillCity = myScanner.nextLine();
+        String userBillCity = myScanner.nextLine().trim();
         System.out.print("Billing State: ");
-        String userBillState = myScanner.nextLine();
+        String userBillState = myScanner.nextLine().trim();
         System.out.print("Billing Zip: ");
-        String userBillZip = myScanner.nextLine();
+        String userBillZip = myScanner.nextLine().trim();
         System.out.print("Shipping Street: ");
-        String userShipSt = myScanner.nextLine();
+        String userShipSt = myScanner.nextLine().trim();
         System.out.print("Shipping City: ");
-        String userShipCity = myScanner.nextLine();
+        String userShipCity = myScanner.nextLine().trim();
         System.out.print("Shipping State: ");
-        String userShipState = myScanner.nextLine();
+        String userShipState = myScanner.nextLine().trim();
         System.out.print("Shipping Zip: \n");
-        String userShipZip = myScanner.nextLine();
+        String userShipZip = myScanner.nextLine().trim();
 
         //using string builder to append and format
         //shortened it by a lot removing redundancy
@@ -44,7 +45,7 @@ public class AddressBuilderApp {
         + userShipState + " "
         + userShipZip);
 
-        //print out string builder
-        System.out.println(myUserAddress);
+        //return string builder
+        return myUserAddress;
     }
 }
