@@ -30,7 +30,7 @@ public class AddressBuilderApp {
         String userShipCity = myScanner.nextLine().trim();
         System.out.print("Shipping State: ");
         String userShipState = myScanner.nextLine().trim();
-        System.out.print("Shipping Zip: \n");
+        System.out.print("Shipping Zip: ");
         String userShipZip = myScanner.nextLine().trim();
 
         //using string builder to append and format
