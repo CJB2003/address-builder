@@ -34,18 +34,19 @@ public class AddressBuilderApp {
         String userShipZip = myScanner.nextLine().trim();
 
         //using string builder to append and format
-        //shortened it by a lot removing redundancy
-        String myUserAddress = (userName + "\n"
-        + "\nBilling Address:" + "\n" + userBillSt + "\n"
-        + userBillCity + ", "
-        + userBillState + " "
-        + userBillZip + "\n"
-        + "\nShipping Address: " + "\n" + userShipSt + "\n"
-        + userShipCity + ", "
-        + userShipState + " "
-        + userShipZip);
+        StringBuilder myUserAddress = new StringBuilder();
+
+        myUserAddress.append(userName + "\n"
+                + "\nBilling Address:" + "\n" + userBillSt + "\n"
+                + userBillCity + ", "
+                + userBillState + " "
+                + userBillZip + "\n"
+                + "\nShipping Address: " + "\n" + userShipSt + "\n"
+                + userShipCity + ", "
+                + userShipState + " "
+                + userShipZip);
 
         //return string builder
-        return myUserAddress;
+        return myUserAddress.toString();
     }
 }
