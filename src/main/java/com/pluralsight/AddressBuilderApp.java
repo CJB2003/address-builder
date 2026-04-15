@@ -11,9 +11,6 @@ public class AddressBuilderApp {
     //created this method to declutter main
     public static void StringBuilder() {
 
-        //string builder method
-        StringBuilder userAddress = new StringBuilder();
-
         //Asks for user input and prints them out
         System.out.println("Please provide the following information:");
         System.out.print("Full name: ");
@@ -36,18 +33,18 @@ public class AddressBuilderApp {
         String userShipZip = myScanner.nextLine();
 
         //using string builder to append and format
-        userAddress.append(userName + "\n");
-        userAddress.append("\nBilling Address:" + "\n" + userBillSt + "\n");
-        userAddress.append(userBillCity + ", ");
-        userAddress.append(userBillState + " ");
-        userAddress.append(userBillZip + "\n");
-        userAddress.append("\nShipping Address: " + "\n" + userShipSt + "\n");
-        userAddress.append(userShipCity + ", ");
-        userAddress.append(userShipState + " ");
-        userAddress.append(userShipZip + "\n");
+        //shortened it by a lot removing redundancy
+        String myUserAddress = (userName + "\n"
+        + "\nBilling Address:" + "\n" + userBillSt + "\n"
+        + userBillCity + ", "
+        + userBillState + " "
+        + userBillZip + "\n"
+        + "\nShipping Address: " + "\n" + userShipSt + "\n"
+        + userShipCity + ", "
+        + userShipState + " "
+        + userShipZip);
 
         //print out string builder
-        String myUserAddress = userAddress.toString();
         System.out.println(myUserAddress);
     }
 }
